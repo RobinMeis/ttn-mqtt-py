@@ -1,10 +1,10 @@
 # ttn-mqtt-py
 Python3 MQTT Library for TTN
 
-=== TLS ===
+## TLS
 To use TLS download certificate from TTN: https://console.thethingsnetwork.org/mqtt-ca.pem
 
-=== Regions ===
+## Regions
 Regions are stored in ttn_constants according to https://www.thethingsnetwork.org/wiki/Backend/Connect/Gateway#connect-a-gateway_server-addresses
 
 |Region|Comment|Constant|
