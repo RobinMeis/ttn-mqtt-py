@@ -14,7 +14,7 @@ ttn_mqtt.ttn_mqtt(region, application_id, application_access_key, tls=True, mqtt
 ```
 
 ### Plain
-NOT RECOMMENDED! To disable tls and ignore the TLS fallback warning, set '''tls=False'''
+NOT RECOMMENDED! To disable tls and ignore the TLS fallback warning, set ```tls=False```
 
 ### Regions
 Regions are stored in ttn_constants according to https://www.thethingsnetwork.org/wiki/Backend/Connect/Gateway#connect-a-gateway_server-addresses
