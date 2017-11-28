@@ -1,8 +1,8 @@
 # ttn-mqtt-py
-Python3 MQTT Library for TTN. Currently only supports uplink messages
+Python3 MQTT Library for TTN. Currently only supports uplink messages. The full API Docs are located at: https://www.thethingsnetwork.org/docs/applications/mqtt/api.html
 
 ## Establish connection
-To connect to the TTN MQTT server, the following parameters are required:
+To connect to the TTN MQTT server, you'll need to create a new ttn_mqtt handler:
 ```python
 ttn_mqtt.ttn_mqtt(region, application_id, application_access_key)
 ```
@@ -29,3 +29,11 @@ Regions are stored in ttn_constants according to https://www.thethingsnetwork.or
 |AS1   |Southeast Asia 920-923 MHz |ttn_constants.AS1|
 |AS2   |Southeast Asia 923-925 MHz |ttn_constants.AS2|
 |KR    |Korea 920-923 MHz          |ttn_constants.KR |
+
+## Device
+Class to create devices to listen for data. These devices can be added to an ttn_mqtt object.
+```python
+test_node = ttn_device.device("device_id") #Creates your device
+test_node.set_uplink_callback(test_node_callback) #Sets an uplink data callback
+ttn.register_device(test_node) #Adds your devices to the ttn.mqtt handler
+```
