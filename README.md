@@ -2,7 +2,8 @@
 Python3 MQTT Library for TTN
 
 ## TLS
-To use TLS download certificate from TTN: https://console.thethingsnetwork.org/mqtt-ca.pem
+To use TLS download certificate from TTN: https://console.thethingsnetwork.org/mqtt-ca.pem. If you place it in your applications root directory, TLS will be used by defualt. Otherwise you need to call the constructor like this:
+```python ttn_mqtt.ttn_mqtt(region, application_id, application_access_key, tls=True, mqtt_ca="mqtt-ca.pem") ```
 
 ## Regions
 Regions are stored in ttn_constants according to https://www.thethingsnetwork.org/wiki/Backend/Connect/Gateway#connect-a-gateway_server-addresses
