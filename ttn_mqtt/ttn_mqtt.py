@@ -43,7 +43,6 @@ class ttn_mqtt:
         if (rc!=0): warnings.warn("Connected with result code "+str(rc), Warning)
 
         for device in self.devices: #Subscribe devices to MQTT
-            #TODO: Re-subscribe on reconnnect
             client.subscribe("%s/devices/%s/up" % (self.application_id, device.DevID))
 
     def _on_message(self, client, userdata, msg):
