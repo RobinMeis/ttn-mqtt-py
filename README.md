@@ -8,7 +8,7 @@ ttn_mqtt.ttn_mqtt(region, application_id, application_access_key)
 ```
 
 ### TLS
-To use TLS, download certificate from TTN: https://console.thethingsnetwork.org/mqtt-ca.pem. If you place it in your applications root directory, TLS will be used by default. Otherwise you need to call the constructor like this to specify the certifactes path:
+To use TLS, download certificate from TTN: https://console.thethingsnetwork.org/mqtt-ca.pem. If you place it in your applications root directory, TLS will be used by default. Otherwise you need to call the constructor like this to specify the certificates path:
 ```python
 ttn_mqtt.ttn_mqtt(region, application_id, application_access_key, tls=True, mqtt_ca="mqtt-ca.pem")
 ```
