@@ -61,4 +61,5 @@ class ttn_mqtt:
 
 
     def register_device(self, device_object): #Add device object
-        self.devices.append(device_object) #TODO: Adding a device after connect is currently not possible
+        self.devices.append(device_object)
+        client.subscribe("%s/devices/%s/up" % (self.application_id, device_object.DevID)) #TODO: Test if subscription is possible after connection was established
