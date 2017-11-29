@@ -53,8 +53,7 @@ class ttn_mqtt:
         if (topic[-1] == 'up'): #Handle uplink messages
             for device in self.devices:
                 if (device.getDevID() == payload_decoded["dev_id"]):
-                    print("Found dev id")
-                    if (device.callbacksActive() and device.uplink_callback): #Fire callback if callbacks for this device enabled
+                    if (device.callbacksActive() and device.uplink_callback): #Fire callback if callbacks are enabled for this device
                         device.uplink_callback(payload_decoded)
 
         else:
@@ -62,4 +61,4 @@ class ttn_mqtt:
 
 
     def register_device(self, device_object): #Add device object
-        self.devices.append(device_object)
+        self.devices.append(device_object) #TODO: Adding a device after connect is currently not possible
