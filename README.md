@@ -46,4 +46,4 @@ In order to process incoming messages the callback function is required. The inc
 def test_node_callback(payload):
     print(payload)
 ```
-The callback is enabled by default. It can be disabled using ```test.node.disable_callbacks()``` and re-enabled by calling ```test.node.enable_callbacks()```
+The callback is enabled by default. It can be disabled using ```test_node.disable_callbacks()``` and re-enabled by calling ```test_node.enable_callbacks()```
