@@ -16,5 +16,5 @@ class device:
     def getDevID(self): #Returns Device ID
         return self.DevID
 
-    def callbacksActive(self):
+    def callbacksActive(self): #Returns true if callbacks are active
         return self.callbacks_active

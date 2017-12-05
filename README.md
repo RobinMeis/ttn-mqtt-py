@@ -40,6 +40,7 @@ test_node = ttn_device.device("device_id") #Creates your device
 test_node.set_uplink_callback(test_node_callback) #Sets an uplink data callback
 ttn.register_device(test_node) #Adds your devices to the ttn.mqtt handler
 ```
+Devices can either be registered before or after calling ```ttn.connect()```
 ### Callback
 In order to process incoming messages the callback function is required. The incoming data is passed to your function:
 ```python
