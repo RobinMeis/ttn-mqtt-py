@@ -1,6 +1,10 @@
 # ttn-mqtt-py
 Python3 MQTT Library for the TTN MQTT server. Currently only supports uplink messages. The full API Docs are located at: https://www.thethingsnetwork.org/docs/applications/mqtt/api.html
 
+## Dependencies
+ttn-mqtt-py required Python3 and paho-mqtt
+```pip(3) install paho-mqtt```
+
 ## Establish connection
 To connect to the TTN MQTT server, you'll need to create a new ttn_mqtt handler:
 ```python
