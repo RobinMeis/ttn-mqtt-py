@@ -47,11 +47,12 @@ class ttn_mqtt:
 
     def _on_message(self, client, userdata, msg):
         topic = msg.topic.split("/")
-        payload_decoded = json.loads(msg.payload)
+        payload_decoded = json.loads(msg.payload.decode('UTF-8'))
 
-        payload_decoded["payload_bytes"] = [] #Convert payload to bytes
-        for byte in base64.b64decode(payload_decoded["payload_raw"]):
-            payload_decoded["payload_bytes"].append(byte)
+        if (payload_decoded["payload_raw"] != None):
+            payload_decoded["payload_bytes"] = [] #Convert payload to bytes
+            for byte in base64.b64decode(payload_decoded["payload_raw"]):
+                payload_decoded["payload_bytes"].append(byte)
 
         if (topic[-1] == 'up'): #Handle uplink messages
             for device in self.devices:
